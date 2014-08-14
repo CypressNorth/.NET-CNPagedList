@@ -6,16 +6,18 @@ A simple class that accepts a collection of items and paginates the results. Thi
 Usage
 ================
 To create a paginated list:
+```C#
 CNPagedList<Model> pagedList = new CNPagedList<Model>(items, page, pageLimit);
+```
 
-The parameters page and pageLimit are optional. If they are not provided, the CNPagedList will contain all of the items.
+The parameters _page_ and _pageLimit_ are optional. If they are not provided, the CNPagedList will contain all of the items.
 
 JSON Example
 ================
-This is an example of a response returned from the WebApi.
+This is an example of a JSON response returned from the WebApi.
 
 ... assume we specify page size of 3, and there are a total of 10 items ...
-
+```json
 {
   "items": [
     {
@@ -32,3 +34,4 @@ This is an example of a response returned from the WebApi.
   "pageSize":3,
   "totalItemCount":10
 }
+```
