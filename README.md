@@ -1,16 +1,16 @@
 .NET-CNPagedList
 ================
 
-A simple class that accepts a collection of items and paginates the results. This is useful when returning a paginated list from a WebApi project.
+A simple class that accepts an IQueryable, a page number parameter, and a page size parameter, and paginates the results. This is useful when returning a paginated list from a WebApi project.
 
 Usage
 ================
 To create a paginated list:
 ```C#
-CNPagedList<Model> pagedList = new CNPagedList<Model>(items, page, pageLimit);
+CNPagedList<Model> pagedList = new CNPagedList<Model>(queryable, page, pageLimit);
 ```
 
-The parameters _page_ and _pageLimit_ are optional. If they are not provided, the CNPagedList will contain all of the items.
+The parameters _page_ and _pageLimit_ are optional. If they are not provided, the CNPagedList will contain all of the items in the queryable.
 
 JSON Example
 ================
